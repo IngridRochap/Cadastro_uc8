@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sistema de Cadastro</title>
+</head>
+<body>
+    <div id="fundo">
+    <h1>Sistema de Cadastro</h1>
+    
+    <form method="POST" action="index.html" onsubmit="return enviarDados();">
+		<table>
+			<tr>
+				<td>Nome: </td>
+				<td><input type="text" name="nome" id="nome"></td>
+			</tr>
+			<tr>
+				<td>Idade: </td>
+				<td><input type="text" name="idade" id="idade"></td>
+			</tr>
+			<tr>
+				<td>Data: </td>
+				<td><input type="text" name="data" id="data"></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Cadastrar"></td>
+			</tr>
+		</table>
+    
+	</form>
+
+        <script>
+        date = new Date().toLocaleDateString();
+        document.write(date);
+        </script>
+        </div>
+        
+<script>
+    function enviarDados(){
+		var nome = document.getElementById("nome").value;
+		var idade = document.getElementById("idade").value;
+		var data = document.getElementById("data").value;
+        var participantes = [nome]
+    alert(participantes)
+        
+        if(nome.length < 3 || nome.length > 30)
+				alert('Tamanho do nome invalido');
+			else{
+				if(idade < 18 || idade >=100)
+					alert('Cadastro não permitido pela idade');
+				else{
+					if(data <= date)
+						alert('Cadastro não permitido por data inválida');
+                else{
+                    alert('Cadastro Realizado com Sucesso')
+                }
+                }
+            }
+        }
+</script>
+</div>
+</body>
+</html>

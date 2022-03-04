@@ -1,0 +1,26 @@
+/* geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    color: #323232;
+    border: none;
+  }
+  
+  body {
+    padding-top: 5vh;
+    background-color: aquamarine;
+    background-size: cover;
+    background-position-y: -150px;
+  }
+  h1{
+    /*font-style: italic;*/
+    font-size: 40px;
+  }
+  table{
+      font-size: 20px;
+  }
+  
+ 
+  
